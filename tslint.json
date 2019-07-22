@@ -1,0 +1,19 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [false],
+    "member-access": false,
+    "object-literal-sort-keys": false,
+    "no-any": {
+      "severity": "warning"
+    },
+    "no-console": {
+      "severity": "warning"
+    },
+    "max-line-length": [true, 120]
+  },
+  "linterOptions": {
+    "include": ["./scripts/*.ts"],
+    "exclude": ["node_modules", "./src/translations.ts"]
+  }
+}
