@@ -1,18 +1,18 @@
 import styled from '../styling/styled';
+import { media } from '../styling/theme';
 
-export const CONTAINER_MAX_WIDTH = 1160;
+interface ContainerProps {
+  bolderPadding?: boolean;
+}
 
-const Container = styled('div')({
-  position: 'relative',
+const Container = styled('div')<ContainerProps>(({ bolderPadding }) => ({
   margin: '0 auto',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  width: '100%',
-  maxWidth: `${CONTAINER_MAX_WIDTH}px`,
-  paddingLeft: '30px',
-  paddingRight: '30px',
-  zIndex: 1,
-  boxSizing: 'border-box',
-});
+  padding: bolderPadding ? '0 17px' : '0 10px',
+  maxWidth: '1140px',
+  position: 'relative',
+  [media.m]: {
+    padding: bolderPadding ? '0 55px' : '0 30px',
+  }
+}));
 
 export default Container;

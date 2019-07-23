@@ -1,13 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import FinalWaySection from '../partials/FinalWaySection';
-import FooterSection from '../partials/FooterSection';
-import HeaderSection from '../partials/HeaderSection';
-import NonProfitsSection from '../partials/NonProfitsSection';
-import OneMillionSection from '../partials/OneMillionSection';
-import PartnersSection from '../partials/PartnersSection';
-import TimelineSection from '../partials/TimelineSection';
+
+import Claim from './Homepage/Claim';
+import Footer from './Homepage/Footer';
+import Groups from './Homepage/Groups';
+import Header from './Homepage/Header';
+import Info from './Homepage/Info';
+import Members from './Homepage/Members';
+
 import { t } from '../translations';
+
 
 class IndexPage extends React.Component {
   render() {
@@ -33,14 +35,15 @@ class IndexPage extends React.Component {
               content: t('meta_desct'),
             },
           ]}
-        />
-        <HeaderSection />
-        <NonProfitsSection />
-        <OneMillionSection />
-        <FinalWaySection />
-        <TimelineSection />
-        <PartnersSection />
-        <FooterSection />
+        >
+          <link rel="stylesheet" href="https://use.typekit.net/gzt3ugr.css" />
+        </Helmet>
+        <Header />
+        <Claim />
+        <Groups />
+        <Info />
+        <Members />
+        <Footer />
       </>
     );
   }
