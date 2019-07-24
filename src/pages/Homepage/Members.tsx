@@ -6,21 +6,21 @@ import Member from './Member';
 
 import imgBB from '../../assets/images/members/blueberry.svg';
 import imgBooktookcz from '../../assets/images/members/booktookcz.svg';
-import imgBootiq from '../../assets/images/members/bootiq.jpg';
-import imgEuromedia from '../../assets/images/members/euromedia.jpg';
+import imgBootiq from '../../assets/images/members/bootiq.svg';
+import imgEuromedia from '../../assets/images/members/euromedia.png';
 import imgFingo from '../../assets/images/members/fingo.png';
 import imgFinnology from '../../assets/images/members/finnology.jpg';
-import imgGoldenOakCapital from '../../assets/images/members/golden-oak-capital.jpg';
-import imgGoldenOakTrust from '../../assets/images/members/golden-oak-trust.jpg';
-import imgLuxor from '../../assets/images/members/luxor.jpg';
-import imgNovasoft from '../../assets/images/members/novasoft.jpg';
+import imgGoldenOakCapital from '../../assets/images/members/golden-oak-capital.svg';
+import imgGoldenOakTrust from '../../assets/images/members/golden-oak-trust.svg';
+import imgLuxor from '../../assets/images/members/luxor.png';
+import imgNovasoft from '../../assets/images/members/novasoft.png';
 
 
 const members = [
   {
     alt: 'BOOT!Q',
     image: imgBootiq,
-    width: 108,
+    width: 135,
     link: '//www.bootiq.io/',
   },
   {
@@ -49,13 +49,13 @@ const members = [
   {
     alt: 'Golden Oak Capital',
     image: imgGoldenOakCapital,
-    width: 106,
+    width: 119,
     link: '//www.goldenoakcapital.sk',
   },
   {
     alt: 'Golden Oak Trust',
     image: imgGoldenOakTrust,
-    width: 109,
+    width: 122,
     link: '//www.goldenoaktrust.cz',
   },
   {
@@ -131,6 +131,7 @@ class Members extends React.Component {
                 alt={member.alt}
                 imagePath={member.image}
                 width={member.width}
+                link={member.link}
               />
             )}
           </StyledMembers>

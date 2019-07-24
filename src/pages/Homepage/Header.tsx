@@ -5,10 +5,10 @@ import styled from '../../styling/styled';
 import { colors, media } from '../../styling/theme';
 
 const StyledHeader = styled('header')({
-  padding: '6px 0 3px 0',
+  padding: '11px 0 5px 0',
   backgroundColor: colors.black,
   [media.m]: {
-    padding: '25px 0',
+    padding: '30px 0 20px',
   }
 });
 

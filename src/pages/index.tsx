@@ -16,24 +16,13 @@ class IndexPage extends React.Component {
     return (
       <>
         <Helmet
-          title={t('meta_title')}
+          title={'INTEFI CAPITAL | Sme lokální investiční skupina'}
           meta={[
             {
-              property: 'og:image',
-              content: 'http://ngo.blueberry.io/og-ngo.png',
-            },
-            {
               name: 'description',
-              content: t('meta_desct'),
+              content: 'INTEFI Capital je lokální skupina s globálním přesahem s obratem přes 140 miliónu € se zaměřením na Informační technologie, Finance & Real Estate a Nakladatelství a média.',
             },
-            {
-              property: 'og:title',
-              content: t('meta_title'),
-            },
-            {
-              property: 'og:description',
-              content: t('meta_desct'),
-            },
+
           ]}
         >
           <link rel="stylesheet" href="https://use.typekit.net/gzt3ugr.css" />

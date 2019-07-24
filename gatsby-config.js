@@ -17,6 +17,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true
+      }
+    },
+    {
       resolve: 'gatsby-plugin-tslint',
       options: {
         test: /\.ts$|\.tsx$/,

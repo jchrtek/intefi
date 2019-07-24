@@ -30,7 +30,7 @@ class Groups extends React.Component {
   render() {
     return (
       <StyledWrapper id="groups">
-        <Container bolderPadding>
+        <Container bolderPadding notFluid>
           <StyledGroups>
 
             <Group

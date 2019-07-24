@@ -110,7 +110,7 @@ class Footer extends React.Component {
   render() {
     return (
       <StyledFooter>
-        <Container>
+        <Container notFluid>
           <StyledFooterHolder>
             <StyledColLogo>
               <StyledLogo src={imgLogo} />
