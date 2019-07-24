@@ -7,13 +7,13 @@ import Member from './Member';
 import imgBB from '../../assets/images/members/blueberry.svg';
 import imgBooktookcz from '../../assets/images/members/booktookcz.svg';
 import imgBootiq from '../../assets/images/members/bootiq.jpg';
-import imgEuromedia from '../../assets/images/members/euromedia.jpg';
+import imgEuromedia from '../../assets/images/members/euromedia.png';
 import imgFingo from '../../assets/images/members/fingo.png';
 import imgFinnology from '../../assets/images/members/finnology.jpg';
 import imgGoldenOakCapital from '../../assets/images/members/golden-oak-capital.jpg';
 import imgGoldenOakTrust from '../../assets/images/members/golden-oak-trust.jpg';
-import imgLuxor from '../../assets/images/members/luxor.jpg';
-import imgNovasoft from '../../assets/images/members/novasoft.jpg';
+import imgLuxor from '../../assets/images/members/luxor.png';
+import imgNovasoft from '../../assets/images/members/novasoft.png';
 
 
 const members = [
@@ -131,6 +131,7 @@ class Members extends React.Component {
                 alt={member.alt}
                 imagePath={member.image}
                 width={member.width}
+                link={member.link}
               />
             )}
           </StyledMembers>
