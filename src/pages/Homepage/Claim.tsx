@@ -44,7 +44,7 @@ const StyledClaimWrapper = styled('div')({
   margin: '24px 0 9px',
   textAlign: 'center',
   [media.m]: {
-    margin: '49px 0 9px'
+    margin: '48px 0 9px'
   }
 })
 
