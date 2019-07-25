@@ -1,6 +1,6 @@
 import React from 'react';
 import imgClaimBg from '../../assets/images/claim-bg.jpg';
-import imgLogo from '../../assets/images/logo.svg';
+import imgLogo from '../../assets/images/logo-shadows.svg';
 import Container from '../../components/Container';
 import Icon, { IconType } from '../../components/Icons';
 import { scrollToAnchor } from '../../helpers/scrollTo';
@@ -22,7 +22,7 @@ const StyledContentWrapper = styled('div')({
   backgroundImage: `url('${imgClaimBg}')`,
   backgroundSize: 'cover',
   [media.m]: {
-    paddingTop: 100,
+    paddingTop: 90,
     position: 'absolute',
     top: 0,
     right: 0,
@@ -44,7 +44,7 @@ const StyledClaimWrapper = styled('div')({
   margin: '24px 0 9px',
   textAlign: 'center',
   [media.m]: {
-    margin: '53px 0 9px'
+    margin: '49px 0 9px'
   }
 })
 
@@ -84,7 +84,7 @@ const StyledLogo = styled('img')({
   width: 72,
   display: 'block',
   [media.m]: {
-    width: 284,
+    width: 290,
   }
 });
 
