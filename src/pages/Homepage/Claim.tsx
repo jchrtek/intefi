@@ -17,7 +17,7 @@ const StyledWrapper = styled('div')({
 })
 
 const StyledContentWrapper = styled('div')({
-  padding: '21px 0 1px',
+  padding: '18px 0 1px',
   position: 'relative',
   backgroundImage: `url('${imgClaimBg}')`,
   backgroundSize: 'cover',
@@ -41,7 +41,7 @@ const StyledHeading = styled('h1')({
 });
 
 const StyledClaimWrapper = styled('div')({
-  margin: '24px 0 9px',
+  margin: '20px 0 9px',
   textAlign: 'center',
   [media.m]: {
     margin: '48px 0 9px'
@@ -81,7 +81,7 @@ const StyledClaimSmall = styled('small')({
 
 const StyledLogo = styled('img')({
   margin: '0 auto',
-  width: 72,
+  width: 80,
   display: 'block',
   [media.m]: {
     width: 290,
