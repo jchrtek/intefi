@@ -6,7 +6,7 @@ import { colors, media } from '../../styling/theme';
 import Map from './Map';
 
 const StyledFooter = styled('footer')({
-  padding: '15px 0 38px',
+  padding: '28px 0 38px',
   fontSize: 15,
   textAlign: 'center',
   background: colors.black,
