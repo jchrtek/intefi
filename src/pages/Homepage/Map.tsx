@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 class MapComponent extends React.Component {
   render() {
@@ -7,7 +7,7 @@ class MapComponent extends React.Component {
 
     const options = {
       center: [50.0611242, 14.4098988],
-      zoom: 16,
+      zoom: 14,
     }
 
     if (typeof window !== 'undefined') {

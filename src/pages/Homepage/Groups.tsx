@@ -1,11 +1,11 @@
 import React from 'react';
-import imgFinance from '../../assets/images/finance.jpg';
 import imgFinanceLg from '../../assets/images/finance-lg.jpg';
-import imgIt from '../../assets/images/it.jpg';
+import imgFinance from '../../assets/images/finance.jpg';
 import imgItLg from '../../assets/images/it-lg.jpg';
+import imgIt from '../../assets/images/it.jpg';
 import imgLogo from '../../assets/images/logo.svg';
-import imgPublishing from '../../assets/images/publishing.jpg';
 import imgPublishingLg from '../../assets/images/publishing-lg.jpg';
+import imgPublishing from '../../assets/images/publishing.jpg';
 import Container from '../../components/Container';
 import styled from '../../styling/styled';
 import { colors, media } from '../../styling/theme';

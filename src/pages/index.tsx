@@ -8,9 +8,6 @@ import Header from './Homepage/Header';
 import Info from './Homepage/Info';
 import Members from './Homepage/Members';
 
-import { t } from '../translations';
-
-
 class IndexPage extends React.Component {
   render() {
     return (
@@ -20,6 +17,7 @@ class IndexPage extends React.Component {
           meta={[
             {
               name: 'description',
+              // tslint:disable-next-line
               content: 'INTEFI Capital je lokální skupina s globálním přesahem s obratem přes 140 miliónu € se zaměřením na Informační technologie, Finance & Real Estate a Nakladatelství a média.',
             },
 
