@@ -46,7 +46,7 @@ class Groups extends React.Component {
               color="blue"
             />
             <Group
-              title="Finance & real estate"
+              title="Finance <span style='white-space: nowrap;'>& real estate</span>"
               imagePath={imgFinance}
               imagePathLg={imgFinanceLg}
               color="green"
