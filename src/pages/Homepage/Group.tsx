@@ -1,10 +1,10 @@
 import React from 'react';
 import imgLogo from '../../assets/images/logo.svg';
 import Container from '../../components/Container';
+import InnerHTML from '../../components/InnerHTML';
+import Picture from '../../components/Picture';
 import styled from '../../styling/styled';
 import { colors, media } from '../../styling/theme';
-import Picture from '../../components/Picture';
-import InnerHTML from '../../components/InnerHTML';
 
 interface GroupProps {
   title: string,

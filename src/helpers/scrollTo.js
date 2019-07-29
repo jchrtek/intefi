@@ -6,6 +6,7 @@ export const getElementOffset = (el) => {
   };
 };
 
+// tslint:disable
 export const scrollToAnchor = (event, id, shift = 0, behavior = 'smooth') => {
   if (window.scrollTo) {
     event.preventDefault()

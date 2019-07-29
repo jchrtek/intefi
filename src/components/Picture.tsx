@@ -1,5 +1,5 @@
-import { breakpoints } from '../styling/theme';
 import styled from '../styling/styled';
+import { breakpoints } from '../styling/theme';
 
 interface PictureProps {
   alt: string;

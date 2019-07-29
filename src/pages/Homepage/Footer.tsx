@@ -1,9 +1,9 @@
 import React from 'react';
-import imgMap from '../../assets/images/footer-map.jpg';
 import imgLogo from '../../assets/images/logo.svg';
 import Container from '../../components/Container';
 import styled from '../../styling/styled';
 import { colors, media } from '../../styling/theme';
+import Map from './Map';
 
 const StyledFooter = styled('footer')({
   padding: '15px 0 38px',
@@ -96,14 +96,20 @@ const StyledContactLink = styled('a')({
   }
 });
 
-const StyledMapLink = styled('a')({
+const StyledMapWrapper = styled('div')({
   width: '100%',
-  display: 'block',
-});
-
-const StyledMapImg = styled('img')({
-  width: '100%',
-  display: 'block',
+  height: 192,
+  background: colors.white,
+  [media.m]: {
+    width: 312,
+    maxWidth: '100%',
+  },
+  ' > div': {
+    width: '100%',
+    height: '100%',
+    opacity: 0.8,
+    filter: 'grayscale(100%)',
+  }
 });
 
 class Footer extends React.Component {
@@ -140,13 +146,9 @@ class Footer extends React.Component {
             </StyledColText>
 
             <StyledColMap>
-              <StyledMapLink
-                href="https://goo.gl/maps/gYtNniczFH39VY1H7"
-                target="_blank"
-                title="otevřít mapu v novém okně"
-              >
-                <StyledMapImg src={imgMap} alt="map" />
-              </StyledMapLink>
+              <StyledMapWrapper>
+                <Map />
+              </StyledMapWrapper>
             </StyledColMap>
           </StyledFooterHolder>
         </Container>
