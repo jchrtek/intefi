@@ -1,0 +1,124 @@
+version: 2.1
+
+executors:
+  main:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:carbon
+
+commands:
+  c_prepare:
+    description: "Checkout and persist the repo"
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  c_build:
+    description: "Build, lint and test"
+    steps:
+      - attach_workspace:
+          at: .
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependencies-
+
+      - run:
+          command: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Run tslint
+          command: yarn lint
+
+      - run:
+          name: Run tests
+          command: yarn test
+
+      - run:
+          name: Run build
+          command: yarn build
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+
+  c_deploy:
+    description: "Deploy a built app to its S3 bucket"
+    parameters:
+      bucket:
+        type: string
+    steps:
+      - attach_workspace:
+          at: .
+      - run: sudo apt-get -y -qq install awscli
+      - run:
+          name: Update AWS keys
+          command: |
+            echo "export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $BASH_ENV
+            echo "export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $BASH_ENV
+            source $BASH_ENV
+      - run:
+          name: Deploy to S3
+          command: |
+            aws s3 sync --acl public-read --sse --delete --cache-control 'max-age=604800' --exclude index.html public s3://<< parameters.bucket >>/ --region eu-central-1
+            aws s3 sync --acl public-read --sse --delete --cache-control 'no-cache' public s3://<< parameters.bucket >>/ --region eu-central-1
+
+jobs:
+  prepare:
+    executor: main
+    steps:
+      - c_prepare
+
+  build:
+    executor: main
+    steps:
+      - c_build
+
+  deploy-stage:
+    executor: main
+    steps:
+      - c_deploy:
+          bucket: bb-intefi-staging
+
+  deploy-prod:
+    executor: main
+    steps:
+      - c_deploy:
+          bucket: bb-intefi-production
+
+workflows:
+  build-hold-deploy:
+    jobs:
+      - prepare
+
+      - build:
+          requires:
+            - prepare
+
+      - deploy-stage:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
+      - hold:
+          type: approval
+          requires:
+            - deploy-stage
+
+      - deploy-prod:
+          requires:
+            - hold
