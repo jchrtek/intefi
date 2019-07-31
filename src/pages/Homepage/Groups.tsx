@@ -40,16 +40,16 @@ class Groups extends React.Component {
               color="red"
             />
             <Group
-              title="Nakladateství <span style='white-space: nowrap;'>a média</span>"
-              imagePath={imgPublishing}
-              imagePathLg={imgPublishingLg}
-              color="blue"
-            />
-            <Group
               title="Finance <span style='white-space: nowrap;'>& real estate</span>"
               imagePath={imgFinance}
               imagePathLg={imgFinanceLg}
               color="green"
+            />
+            <Group
+              title="Nakladatelství <span style='white-space: nowrap;'>a média</span>"
+              imagePath={imgPublishing}
+              imagePathLg={imgPublishingLg}
+              color="blue"
             />
           </StyledGroups>
         </Container>
