@@ -1,6 +1,6 @@
 import React from 'react';
 import imgClaimBg from '../../assets/images/claim-bg.jpg';
-import imgLogo from '../../assets/images/logo-shadows.svg';
+import imgLogo from '../../assets/images/logo-white.svg';
 import Container from '../../components/Container';
 import Icon, { IconType } from '../../components/Icons';
 import { scrollToAnchor } from '../../helpers/scrollTo';

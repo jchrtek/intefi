@@ -139,7 +139,7 @@ class Footer extends React.Component {
                 Smíchov, 150 00 Praha 5
               </StyledContact>
               <StyledContact>
-                <StyledContactLink href="tel:+420123123456">+420 123 123 456</StyledContactLink>
+                <StyledContactLink href="tel:+420296536536">+420 296 536 536</StyledContactLink>
                 <br />
                 <StyledContactLink href="mailto:info@intefi.cz">info@intefi.cz</StyledContactLink>
               </StyledContact>

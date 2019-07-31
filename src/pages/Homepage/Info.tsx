@@ -33,12 +33,12 @@ class Info extends React.Component {
             <InfoBox
               icon="Diagram"
               value="140 mil. €"
-              desc="obrat"
+              desc="obrat členů skupiny"
             />
             <InfoBox
               icon="Buildings"
-              value="4 mil. €"
-              desc="akvizice"
+              value="40 mil. €"
+              desc="hodnota projektů"
             />
             <InfoBox
               icon="Employee"
