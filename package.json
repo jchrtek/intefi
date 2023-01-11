@@ -19,7 +19,7 @@
     "gatsby-plugin-typescript": "^2.0.11",
     "gatsby-remark-prettier": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.27",
-    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.17",
     "leaflet": "^1.5.1",
     "prop-types": "^15.7.2",
